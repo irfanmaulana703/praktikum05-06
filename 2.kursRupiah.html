@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+
+    <style>
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #tengah {
+            margin: 15%;
+            display: block;
+            text-align: -webkit-center;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: 600;
+            color: #132743;
+        }
+
+        .name {
+            font-size: 2em;
+            font-weight: 600;
+            color: blueviolet;
+        }
+
+        .name td {
+            text-align: center;
+        }
+
+        .mNilai {
+            color: #839b97;
+            padding: 20px;
+        }
+
+        .mNilai input {
+            width: 90%;
+            padding: 10px;
+            font-size: 17px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        .mNilai select {
+            width: 100%;
+            padding: 7px;
+            font-size: 17px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="tengah">
+        <fieldset>
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table>
+                <tr class="name">
+                    <td>Masukan Nilai</td>
+                    <td>Valas</td>
+                    <td>Nilai Rupiah</td>
+                </tr>
+                <tr>
+                    <td class="mNilai">
+                        <input onkeyup="kurs()" placeholder="Masukan Nilai" type="number" name="nilai" id="nilai">
+                    </td>
+                    <td class="mNilai">
+                        <select onchange="kurs()" id="kurs">
+                            <option value="1">Dollar US</option>
+                            <option value="2">Dollar Singapore</option>
+                            <option value="3">Ringgit Malaysia</option>
+                            <option value="4">Yen Jepang</option>
+                            <option value="5">Euro</option>
+                            <option value="6">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td class="mNilai">
+                        <input type="text" id="rupiah" placeholder="Nilai Rupiah" name="rupiah" disabled="" >
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+
+<script>
+	function kurs() {
+
+		let kValue = document.getElementById("kurs").value;
+
+		if (kValue == 1) {
+			input = document.getElementById("nilai").value;
+			nilai = 9915;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (kValue == 2) {
+			input = document.getElementById("nilai").value;
+			nilai = 13472;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (kValue == 3) {
+			input = document.getElementById("nilai").value;
+			nilai = 874;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (kValue == 4) {
+			input = document.getElementById("nilai").value;
+			nilai = 120;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (kValue == 5) {
+			input = document.getElementById("nilai").value;
+			nilai = 15888;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (kValue == 6) {
+			input = document.getElementById("nilai").value;
+			nilai = 3592;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}
+    }
+</script>
+
+</html>

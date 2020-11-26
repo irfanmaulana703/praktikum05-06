@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e8e8e8;
+        }
+
+        .box {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        .kotakpesan {
+            border: 2px solid #000;
+            width: 400px;
+            height: 400px;
+            padding: 1px;
+        }
+
+        form {
+            position: absolute;
+            bottom: 2px;
+        }
+
+        input {
+            width: 358px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="kotakpesan" id="kotakpesan">
+            <form>
+                <input type="text" name="pesan" id="pesan">
+                <button type="submit" onclick="kirim_pesan()">Kirim</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    function kirim_pesan() {
+        let pesan = document.getElementById("pesan").value;
+        document.getElementById("kotakpesan").innerHTML += pesan + "<br />";
+        document.getElementById("pesan").value = "";
+    }
+</script>
+
+</html>

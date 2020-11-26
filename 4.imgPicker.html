@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: orange;
+        }
+
+        select {
+            width: 130px;
+            padding: 7px 25px;
+            margin: 0 45%;
+            display: block;
+            text-align: -webkit-center;
+            font-size: 15px;
+        }
+
+        .img-buah {
+            margin: 40px 0;
+            display: block;
+            text-align: -webkit-center;
+        }
+
+        img {
+            width: 450px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-buah">
+        <img src="gambar/mangga.png"alt="gambar buah" id="gambar">
+        
+    </div>
+
+    <select name="buah" id="buah" onchange="pilih()">
+        <option value="mangga">Mangga</option>
+        <option value="pisang">Pisang</option>
+        <option value="nanas">Nanas</option>
+        <option value="jeruk">Jeruk</option>
+        <option value="apel">Apel</option>
+        <option value="melon">Melon</option>
+    </select>
+</body>
+
+<script>
+    function pilih() {
+        let list_buah = document.getElementById("buah")
+        let selectedBuah = list_buah.selectedIndex + 1
+        console.log("Gambar ke " + selectedBuah + " adalah " + list_buah[selectedBuah - 1].value + ".png");
+        
+        let gambar = document.getElementById("gambar")
+        gambar.src="gambar/"+list_buah[selectedBuah - 1].value+".png"
+
+        alert("Gambar ke " + selectedBuah + " adalah " + list_buah[selectedBuah - 1].value + ".png");
+    }
+</script>
+</html>

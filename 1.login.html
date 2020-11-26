@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 15% 38%;
+            padding: 20px;
+            display: block;
+            text-align: -webkit-center;
+            background-color: cadetblue;
+        }
+
+        label, input {
+            font-size: 19px;
+            padding: 0 9px;
+        }
+
+        label {
+            color: #f5f5f5;
+        }
+
+        button {
+            width: 100px;
+            padding: 5px 12px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .keterangan {
+            margin: -13% 38%;
+            display: block;
+            text-align: -webkit-center;
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="box">
+        <form>
+            <label>Username :</label>
+            <input type="text" placeholder="username" id="username" name="username">
+    
+            <br><br>
+    
+            <label>Password :</label>
+            <input type="password"  placeholder="password" id="password" name="password">
+    
+            <br><br>
+            <button type="submit" onclick="return login()">SUBMIT</button>
+        </form>
+    </div>
+
+    <div class="keterangan">
+        <p>Login: irfan<br>password : 703
+        </p>
+    </div>
+</body>
+
+<script src="otentikasi.js"></script>
+
+</html>
